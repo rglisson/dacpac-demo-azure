@@ -38,7 +38,7 @@ jobs:
     displayName: Add DACPAC file
     inputs:
       script: |
-        copy ".\$(System.DefaultWorkingDirectory)\**\*.dacpac" "$(Build.ArtifactStagingDirectory)"
+        copy "$(System.DefaultWorkingDirectory)\DatabaseProjects\PortalDatabase\bin\Release\*.dacpac" "$(Build.ArtifactStagingDirectory)"
  
   - task: PublishBuildArtifacts@1
     displayName: Publish Artifacts
