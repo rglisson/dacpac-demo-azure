@@ -19,7 +19,7 @@ jobs:
   - task: VSBuild@1
     displayName: Compile Solution
     inputs:
-      solution: '**\*.sln'
+      solution: '.\DatabaseProjects\DatabaseProjects.sln'
       vsVersion: '16.0'
       msbuildArgs: '/m /nologo /t:Build /p:Configuration=Release /p:TreatWarningsAsErrors=true /p:TreatTSqlWarningsAsErrors=true'
       platform: '$(buildPlatform)'
