@@ -19,9 +19,17 @@ jobs:
   - task: VSBuild@1
     displayName: Compile Solution
     inputs:
-      solution: '$(solution)'
+      solution: '**\*.sln'
       vsVersion: '16.0'
       msbuildArgs: '/m /nologo /t:Build /p:Configuration=Release /p:TreatWarningsAsErrors=true /p:TreatTSqlWarningsAsErrors=true'
       platform: '$(buildPlatform)'
       clean: true
     condition: succeeded()
+  
+  - task: ArchiveFiles@2
+    displayName: Package DACPAC
+    inputs:
+      rootFolderOrFile: false
+      archiveType: 'zip'
+      archiveFile: '$(Build.ArtifactStagingDirectory)/DACPAC-demo!$(Build.BuildId).zip'
+      replaceExistingArchive: true
