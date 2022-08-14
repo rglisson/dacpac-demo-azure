@@ -29,7 +29,14 @@ jobs:
   - task: ArchiveFiles@2
     displayName: Package DACPAC
     inputs:
-      rootFolderOrFile: false
+      rootFolderOrFile: '$(Build.ArtifactStagingDirectory)\DatabaseProjects\PortalDatabase\bin\Release\'
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/DACPAC-demo!$(Build.BuildId).zip'
       replaceExistingArchive: true
+  
+  - task: PublishBuildArtifacts@1
+    displayName: Publish Artifacts
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'DACPACs'
+      publishLocations: 'Container'
