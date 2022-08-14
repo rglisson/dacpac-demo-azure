@@ -1,1 +1,27 @@
-# yaml
+name: Build_$(BuildID)
+pr: none
+
+jobs: 
+- job: PackageDACPAC
+  condition: and(succeeded())
+  pool:
+    vmImage: 'windows-latest'
+
+  variables:
+    solution: '.\dacpac-demo-azure\DatabaseProjects\DatabaseProjects.sln'
+    buildPlatform: 'Any CPU'
+    buildConfiguration: 'Release'
+
+  steps:
+  - checkout: self
+    persistCredentials: true
+
+  - task: VSBuild@1
+    displayName: Compile Solution
+    inputs:
+      solution: '$(solution)'
+      vsVersion: '16.0'
+      msbuildArgs: '/m /nologo /t:Build /p:Configuration=Release /p:TreatWarningsAsErrors=true /p:TreatTSqlWarningsAsErrors=true'
+      platform: '$(buildPlatform)'
+      clean: true
+    condition: and(succeeded())
