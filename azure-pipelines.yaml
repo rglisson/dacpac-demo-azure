@@ -29,7 +29,7 @@ jobs:
   - task: ArchiveFiles@2
     displayName: Package DACPAC
     inputs:
-      rootFolderOrFile: '$(Build.ArtifactStagingDirectory)\DatabaseProjects\PortalDatabase\bin\Release\'
+      rootFolderOrFile: '$(System.DefaultWorkingDirectory)\DatabaseProjects\PortalDatabase\bin\Release\'
       archiveType: 'zip'
       archiveFile: '$(Build.ArtifactStagingDirectory)/DACPAC-demo!$(Build.BuildId).zip'
       replaceExistingArchive: true
