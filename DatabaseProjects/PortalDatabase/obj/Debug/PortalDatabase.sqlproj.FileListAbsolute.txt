@@ -1,0 +1,10 @@
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\bin\Debug\PortalDatabase.dacpac
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\bin\Debug\PortalDatabase.dll
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\bin\Debug\PortalDatabase.pdb
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\PortalDatabase.sqlproj.AssemblyReference.cache
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\Model.xml
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\refactor.xml
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\postdeploy.sql
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\predeploy.sql
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\PortalDatabase.dll
+C:\Users\rjgli\projects\dacpac-demo\dacpac-demo-azure\DatabaseProjects\PortalDatabase\obj\Debug\PortalDatabase.pdb
