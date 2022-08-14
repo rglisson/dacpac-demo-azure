@@ -3,7 +3,7 @@ pr: none
 
 jobs: 
 - job: PackageDACPAC
-  condition: and(succeeded())
+  condition: succeeded()
   pool:
     vmImage: 'windows-latest'
 
@@ -24,4 +24,4 @@ jobs:
       msbuildArgs: '/m /nologo /t:Build /p:Configuration=Release /p:TreatWarningsAsErrors=true /p:TreatTSqlWarningsAsErrors=true'
       platform: '$(buildPlatform)'
       clean: true
-    condition: and(succeeded())
+    condition: succeeded()
